@@ -1,6 +1,6 @@
 import Buyable from './Buyable';
 
-export default class Movie implements Buyable {
+export default class Phones implements Buyable {
     // constructor(
     //     readonly id: number,
     //     readonly name: string,
@@ -13,28 +13,24 @@ export default class Movie implements Buyable {
     //     readonly percent?: number, 
     // ) { }
 
-        readonly count: number;
+        count: number;
         readonly increasing: boolean;
         readonly id: number;
         readonly name: string;
-        readonly tagline: string;
+        readonly model: string;
         readonly price: number;
         readonly country: string;
         readonly percent?: number;
-        readonly time: string;
-        readonly ganre: Array<string>;
         readonly year: number;
-        constructor(id: number, name: string, price: number, country: string, year: number, tagline: string, time: string, ganre: Array<string>, percent?: number ) { 
+        constructor(id: number, name: string, price: number, country: string, year: number, model: string, percent?: number ) { 
         this.count = 1,
-        this.increasing = false,
+        this.increasing = true,
         this.id = id,
         this.name = name,
-        this.tagline = tagline,
+        this.model = model,
         this.price = price,
         this.country = country,
         this.percent = percent,
-        this.time = time,
-        this.ganre = ganre,
         this.year = year
     }
 }
